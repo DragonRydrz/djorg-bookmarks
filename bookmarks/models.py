@@ -3,6 +3,8 @@ from uuid import uuid4
 # Create your models here.
 from django.contrib.auth.models import User
 
+BOOL_CHOICE = (('True', 'True'), ('False', 'False'))
+
 
 class Bookmark(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)

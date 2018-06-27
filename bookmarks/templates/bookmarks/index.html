@@ -1,0 +1,19 @@
+{% if bookmarks %} Bookmarks:
+
+<ol>
+  {% for bookmark in bookmarks %}
+  <li>
+    <a href=”{{ bookmark.url }}”>{{ bookmark.name }}</a>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %} {% if private_bookmarks %} Private Bookmarks:
+
+<ol>
+  {% for bookmark in private_bookmarks %}
+  <li>
+    <a href=”{{ bookmark.url }}”>{{ bookmark.name }}</a>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
