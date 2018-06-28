@@ -25,7 +25,7 @@ router.register(r'bookmarks', BookmarkViewset)
 router.register(r'private_bookmarks', PrivateBookmarkViewset)
 
 urlpatterns = [
-    re_path(r'^api-token-auth/', views.obhein_auth_token),
+    re_path(r'^api-token-auth/', views.obtain_auth_token),
     path('admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
     path('bookmarks/', include('bookmarks.urls'))
