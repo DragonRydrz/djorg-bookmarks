@@ -12,13 +12,12 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
-from unipath import FSPath as Path
 from decouple import config
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_PATH = Path(__file__).absolute().ancestor(1)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -132,7 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = PROJECT_PATH.child('static')
+# STATIC_ROOT = '/static/'
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
